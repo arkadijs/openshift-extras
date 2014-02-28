@@ -143,7 +143,7 @@ set_mode(options[:advanced_mode])
 
 # Instantiate the cli-provided subscription info in a subscription object
 cli_subscription = Installer::Subscription.new(@config)
-cli_subscription.subscription_type = options[:subscription_type]
+cli_subscription.subscription_type = options[:subscription_type].to_sym
 cli_subscription.rh_username = options[:rh_username]
 cli_subscription.rh_password = options[:rh_password]
 
